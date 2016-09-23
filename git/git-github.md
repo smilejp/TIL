@@ -42,6 +42,14 @@ $ git lfs pull
 lfs로 관리하는 파일은 git checkout 이후에 lfs pull을 해줘야
 제대로 파일의 모든 데이터를 받아오는 것 같다.
 
+### git tags 푸쉬
+
+local에서 만든 tag를 remote에 적용하기 위해서는 push를 해야 한다.
+
+```
+> git push --tags  # 모든 태그를 푸쉬
+```
+
 #### 궁금한 부분
 - jenkins로 처리하는게 아니라 터미널에서 테스트를 해보면 checkout을
 하는 것 만으로도 lfs로 관리하는 파일을 전부 다 받는데 jenkins쪽에 뭔가
