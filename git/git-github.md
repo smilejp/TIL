@@ -50,6 +50,14 @@ local에서 만든 tag를 remote에 적용하기 위해서는 push를 해야 한
 > git push --tags  # 모든 태그를 푸쉬
 ```
 
+### 다른 branch의 commit 내역을 merge 하기
+* merge할 commit 값이 A 일때
+
+```
+> git checkout -b merged_branch
+> git cherry-pick A
+```
+
 #### 궁금한 부분
 - jenkins로 처리하는게 아니라 터미널에서 테스트를 해보면 checkout을
 하는 것 만으로도 lfs로 관리하는 파일을 전부 다 받는데 jenkins쪽에 뭔가

@@ -35,7 +35,10 @@ function Test(A=10, ...C) {
 }
 ```
 
-
 ### arrow function
 * => 함수 내부에서는 this를 정의하지 않는다. 그래서 this는 => 외부의 값이다.
 * => 함수에는 arguments 객체가 전달되지 않는다.
+
+### Class
+* constructor 생성자가 추가되었다.
+* 부모 메소드에 대한 접근은 super 키워드를 사용한다.
