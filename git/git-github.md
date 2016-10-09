@@ -50,6 +50,11 @@ local에서 만든 tag를 remote에 적용하기 위해서는 push를 해야 한
 > git push --tags  # 모든 태그를 푸쉬
 ```
 
+### 로그 한줄로 보기
+```
+> git log -10 --pretty=oneline
+```
+
 ### 다른 branch의 commit 내역을 merge 하기
 * merge할 commit 값이 A 일때
 
@@ -57,6 +62,18 @@ local에서 만든 tag를 remote에 적용하기 위해서는 push를 해야 한
 > git checkout -b merged_branch
 > git cherry-pick A
 ```
+
+### merge와 rebase
+* 절대로 이미 푸시했던 커밋을 대상으로는 rebase를 하지 않는다!
+
+* remote와 local에 동시에 존재하는 브랜치를 pull 할때는 rebase를 사용하도록 한다.
+```
+> git pull --rebase
+```
+* 기능 브랜치에 대해서는 merge를 사용, rebase와 비슷한 동작을 하게되는 fast-forward merge를 사용하지 않는다.
+* 기능 브랜치에 그 부모의 브랜치의 내용을 합칠때는 로컬 브랜치일 때만 rebase로 합침
+(출처 : https://elegantcoder.com/git-merge-or-rebase/)
+
 
 #### 궁금한 부분
 - jenkins로 처리하는게 아니라 터미널에서 테스트를 해보면 checkout을
