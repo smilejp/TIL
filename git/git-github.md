@@ -74,6 +74,13 @@ local에서 만든 tag를 remote에 적용하기 위해서는 push를 해야 한
 * 기능 브랜치에 그 부모의 브랜치의 내용을 합칠때는 로컬 브랜치일 때만 rebase로 합침
 (출처 : https://elegantcoder.com/git-merge-or-rebase/)
 
+### git ignore
+* 끝에 > 를 넣으면 폴더를 무시하라는 것임
+```
+!lib.a        # lib.a는 무시하지 않음
+doc/*.txt     # doc 바로 아래의 txt파일들만 무시
+doc/**/*.txt  # doc 아래의 모든 txt 파일 무시
+```
 
 #### 궁금한 부분
 - jenkins로 처리하는게 아니라 터미널에서 테스트를 해보면 checkout을
